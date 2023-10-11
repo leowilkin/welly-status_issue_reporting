@@ -1,0 +1,83 @@
+name: Issue Reporting
+description: File a issue report to show on the status page
+title: "[Issue]: "
+labels: ["issue"]
+assignees:
+  - leowilkin
+body:
+  - type: dropdown
+    id: staff
+    attributes:
+      label: Are you a staff/student/IT Department member?
+      description: Please select yoru applicable role in College.
+      options:
+        - Pupil
+        - Staff
+        - IT Services
+  - type: input
+    id: email
+    attributes:
+      label: College Email Address
+      description: This helps us follow up with problems, and diagnose if there is a unique issue.
+      value: "@wellingtoncollege.org.uk"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "An issue occured"
+    validations:
+      required: true
+  - type: dropdown
+    id: service
+    attributes:
+      label: Service
+      description: What College Service are you using?
+      options:
+        - Choose one
+        - iSAMS
+        - SOCS
+        - College WiFi
+        - Devices
+        - Microsoft Services
+        - Company Portal
+        - College Printers
+        - Other
+      default: Choose one
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Brave
+        - N/A
+      validations:
+        required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
