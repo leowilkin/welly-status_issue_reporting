@@ -10,7 +10,6 @@ body:
     attributes:
       label: Are you a staff/student/IT Department member?
       description: Please select your applicable role in College.
-      required: true
       options:
         - Pupil
         - Staff
@@ -21,7 +20,6 @@ body:
       label: College Email Address
       description: This helps us follow up with problems, and diagnose if there is a unique issue.
       value: "@wellingtoncollege.org.uk"
-      required: true
   - type: markdown
     attributes:
       value: |
@@ -33,13 +31,11 @@ body:
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "An issue occured"
-      required: true
   - type: dropdown
     id: service
     attributes:
       label: Service
       description: What College Service are you using?
-      required: true
       options:
         - Choose one
         - iSAMS
@@ -49,13 +45,11 @@ body:
         - Microsoft Services
         - Company Portal
         - College Printers
-        - Other
-      default: Choose one
+      default: 1
   - type: dropdown
     id: browsers
     attributes:
       label: What browsers are you seeing the problem on?
-      required: true
       multiple: true
       options:
         - Firefox
