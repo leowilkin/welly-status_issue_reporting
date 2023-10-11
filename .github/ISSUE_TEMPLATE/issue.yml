@@ -14,13 +14,13 @@ body:
         - Pupil
         - Staff
         - IT Services
+        required: true
   - type: input
     id: email
     attributes:
       label: College Email Address
       description: This helps us follow up with problems, and diagnose if there is a unique issue.
       value: "@wellingtoncollege.org.uk"
-    validations:
       required: true
   - type: markdown
     attributes:
@@ -33,13 +33,13 @@ body:
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "An issue occured"
-    validations:
       required: true
   - type: dropdown
     id: service
     attributes:
       label: Service
       description: What College Service are you using?
+      required: true
       options:
         - Choose one
         - iSAMS
@@ -51,12 +51,11 @@ body:
         - College Printers
         - Other
       default: Choose one
-    validations:
-      required: true
   - type: dropdown
     id: browsers
     attributes:
       label: What browsers are you seeing the problem on?
+      required: true
       multiple: true
       options:
         - Firefox
@@ -65,8 +64,6 @@ body:
         - Microsoft Edge
         - Brave
         - N/A
-      validations:
-        required: true
   - type: textarea
     id: logs
     attributes:
